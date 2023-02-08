@@ -1,0 +1,167 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:90vh;
+    background-image: url('D:/Project/Full stack/BdayCard/bg.jpg');
+    background-size: cover;
+  }
+  
+  .card {
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin-left: -800px;
+    perspective: 1200px;
+    transition: 1s;
+  }
+  .card:hover {
+    transform: rotate(0deg);
+  }
+  .card:hover .outside {
+    transform: rotateY(-140deg);
+  }
+  .outside,
+  .inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+  }
+  .inside {
+    background-color: #7393B3; 
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+    color: black;
+    padding-top: 80px;
+  }
+  .outside {
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+    height: 410px;
+  }
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+  }
+  .front {
+    background-color: #7393b3;
+    padding-left: 40px;
+    color: black;
+    height: 120%;
+  }
+  .front img{
+    padding-left: 40px;
+  }
+  .back {
+    transform: rotateY(180deg);
+    background: #7393B3	;
+    justify-content: center
+  }
+  
+  .inside h1 {
+    font-size: 50px;
+    margin-top: -80px;
+  }
+
+  
+  
+  
+#siu{
+    margin-top: -100px;
+}
+  
+.squareOne, .squareTwo, .squareThree, .squareFour, .squareFive, .squareSix, .squareSeven, .squareEight, .squareNine, .squareTen {
+  position: absolute;
+  width: 10px;
+  height: 25px;
+  top:-310px;
+  margin-left: 890px;
+}
+
+.squareOne {
+  background-color: #ef476f;
+  animation: down 2.5s linear infinite;
+  left:50px;
+}
+
+.squareTwo {
+  background-color: #06d6a0;
+  animation: down 2.3s linear infinite .2s;
+  left:150px;
+}
+
+.squareThree {
+  background-color: #118ab2;
+  animation: down 2.4s linear infinite .4s;
+  left:250px;
+}
+
+.squareFour {
+  background-color: #ffbe0b;
+  animation: down 2.7s linear infinite .1s;
+  left:300px;
+}
+
+.squareFive {
+  background-color: #118ab2;
+  animation: down 2.6s linear infinite .7s;
+  left:5px;
+}
+
+@keyframes down {
+  0% {top:-110px; transform: rotate(0deg) rotateY(-90deg);opacity:1;}
+  100% {top:400px; transform: rotate(360deg) rotateY(180deg);opacity:0.5;}
+}
+
+@keyframes downTwo {
+  0% {top:-130px; transform: rotate(0deg) rotateY(90deg);opacity:1;}
+  100% {top:400px; transform: rotate(-360deg) rotateY(-180deg);opacity:0.5;}
+}
+
+
+.squareSix {
+  background-color: #ffbe0b;
+  animation: downTwo 2.4s linear infinite .2s;
+  left:70px;
+}
+
+.squareSeven {
+  background-color: #ef476f;
+  animation: downTwo 2.1s linear infinite .7s;
+  left:170px;
+}
+
+.squareEight {
+  background-color: #ef476f;
+  animation: downTwo 2.4s linear infinite .9s;
+  left:280px;
+}
+
+.squareNine {
+  background-color: #06d6a0;
+  animation: downTwo 2.9s linear infinite .9s;
+  left:50px;
+}
+
+.squareTen {
+  background-color: #118ab2;
+  animation: downTwo 2.2s linear infinite 1.1s;
+  left:350px;
+}
+  
+  
+  
